@@ -2,6 +2,7 @@
 import React from "react";
 import HomeSlider from "../components/HomeSLider";
 import ContactUs from "../components/ContactUs";
+import TourPage from "../components/TourPage";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
 
       {/* Slider Component */}
       <HomeSlider />
+      <TourPage />
       <ContactUs />
     </div>
   );
