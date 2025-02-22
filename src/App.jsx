@@ -1,8 +1,8 @@
-// src/App.jsx
+import React from "react";
 import  { useState, useEffect } from 'react';
-import Loader from './components/Loader';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Loader from './pages/Loader';
+import Navbar from './pages/Navbar';
+import Home from './pages/Home';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,6 @@ function App() {
         <>
           <Navbar />
           <Home />
-          {/* Other routes/components */}
         </>
       )}
     </>

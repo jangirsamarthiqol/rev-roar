@@ -1,4 +1,4 @@
-// src/components/Loader.jsx
+import React from "react";
 import './Loader.css';
 import lionLogo from '../assets/lion-logo1.png'; // Adjust the path as needed
 

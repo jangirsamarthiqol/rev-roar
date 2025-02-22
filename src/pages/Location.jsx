@@ -1,5 +1,5 @@
 // src/components/Location.jsx
-import React from 'react';
+import React from "react";
 
 function Location() {
   return (
