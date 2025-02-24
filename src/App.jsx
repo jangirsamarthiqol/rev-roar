@@ -1,31 +1,23 @@
 import React from "react";
-import  { useState, useEffect } from 'react';
-import Loader from './pages/Loader';
-import Navbar from './pages/Navbar';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./pages/Navbar";
+import Home from "./pages/Home";
+import Gallery from "./pages/Gallery";
+import Enquiry from "./pages/Enquiry";
+import AboutUs from "./pages/AboutUs";
+import Location from "./pages/Location";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading delay
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Navbar />
-          <Home />
-        </>
-      )}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/enquiry" element={<Enquiry />} />
+        <Route path="/location" element={<Location />} />
+      </Routes>
     </>
   );
 }

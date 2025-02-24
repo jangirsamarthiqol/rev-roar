@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <div className="bg-[#333]">
       <div className="py-10 mx-35  text-white">
-        <h4 className="text-8xl">Contact Us</h4>
+        <h4 className="text-8xl font-light">Contact Us</h4>
         <p className="text-3xl p-3">
           Ready to Rev & Roar? Let's make it happen!
         </p>

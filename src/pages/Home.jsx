@@ -6,7 +6,7 @@ import TourPage from "../components/TourPage";
 
 function Home() {
   return (
-    <div className="h-full w-full relative">
+    <div className="h-full relative translate-y-15">
       <img
         className="w-full h-screen object-cover"
         src="/bg-image-1.jpg"

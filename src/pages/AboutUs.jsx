@@ -1,11 +1,14 @@
 // src/components/AboutUs.jsx
-import React from 'react';
+import React from "react";
+import bg_img from "../../public/bg-img.jpg";
 
 function AboutUs() {
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>Learn more about us here.</p>
+    <div className="translate-y-15">
+      <div className="flex bg-{ur">
+        <h1>About Us</h1>
+        <img src="" alt="" />
+      </div>
     </div>
   );
 }

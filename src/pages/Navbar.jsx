@@ -1,26 +1,41 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar ">
-      <div className="flex justify-between mx-50 ">
-        <div className="text-2xl hover:bg-orange-500 rounded-xs text-white p-2">
+    <nav className="navbar fixed top-0 z-10 w-full">
+      <div className="flex justify-between mx-50">
+        <Link
+          to="/"
+          className="text-2xl hover:bg-[#FF4C00] rounded-xs text-white p-2"
+        >
           Home
-        </div>
-        <div className="text-2xl hover:bg-orange-500 rounded-xs text-white p-2">
+        </Link>
+        <Link
+          to="/location"
+          className="text-2xl hover:bg-[#FF4C00] rounded-xs text-white p-2"
+        >
           Location
-        </div>
-        <div className="text-2xl hover:bg-orange-500 rounded-xs text-white p-2">
+        </Link>
+        <Link
+          to="/gallery"
+          className="text-2xl hover:bg-[#FF4C00] rounded-xs text-white p-2"
+        >
           Gallery
-        </div>
-        <div className="text-2xl hover:bg-orange-500 rounded-xs text-white p-2">
+        </Link>
+        <Link
+          to="/enquiry"
+          className="text-2xl hover:bg-[#FF4C00] rounded-xs text-white p-2"
+        >
           Enquiry
-        </div>
-        <div className="text-2xl hover:bg-orange-500 rounded-xs text-white p-2">
+        </Link>
+        <Link
+          to="/about-us"
+          className="text-2xl hover:bg-[#FF4C00] rounded-xs text-white p-2"
+        >
           About Us
-        </div>
+        </Link>
       </div>
     </nav>
   );
