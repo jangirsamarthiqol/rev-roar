@@ -147,8 +147,8 @@ function Enquiry() {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="flex items-center justify-center mb-5">
-        <h1 className="text-8xl">ENQUIRY</h1>
-        <img className="h-30 -ml-4" src={logo} alt="" />
+        <h1 className="text-9xl">ENQUIRY</h1>
+        <img className="h-50 -ml-4" src={logo} alt="" />
       </div>
       <div id="faqs" className="p-20">
         {faqs.slice(0, visibleCount).map((faq, index) => (
