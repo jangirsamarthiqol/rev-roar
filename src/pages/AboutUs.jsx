@@ -1,15 +1,14 @@
 // src/components/AboutUs.jsx
 import React from "react";
-import bg_img from "../../public/bg-img.jpg";
+import bgImg from "../../public/bg-img.jpg"; // Move the image inside /src/assets/
 
 function AboutUs() {
+  
   return (
-    <div className="translate-y-15">
-      <div className="flex bg-{ur">
-        <h1>About Us</h1>
-        <img src="" alt="" />
-      </div>
-    </div>
+    <div
+      className="w-screen h-screen bg-cover bg-center flex items-center justify-center"
+      style={{ backgroundImage: `url(${bgImg})` }}
+    ></div>
   );
 }
 
