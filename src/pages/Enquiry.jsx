@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import logo from "../../public/Logo_022.png";
 import bgImg from "../../public/bg-img.jpg";
+import ContactUs from "../components/ContactUs";
 
 import { FaPlus } from "react-icons/fa6";
 
@@ -143,7 +144,7 @@ function Enquiry() {
 
   return (
     <div
-      className="translate-y-15 w-full h-full bg-cover bg-center p-5"
+      className="translate-y-15 w-full h-full bg-cover bg-center "
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="flex items-center justify-center mb-5">
@@ -167,7 +168,6 @@ function Enquiry() {
                   : "opacity-0 -translate-y-4 h-0 overflow-hidden"
               }`}
             >
-              {/* Preserve line breaks and indent bullet points */}
               <p className="mt-2 whitespace-pre-line text-2xl">
                 {faq.answer.split("\n").map((line, i) => (
                   <span
@@ -185,15 +185,15 @@ function Enquiry() {
         ))}
       </div>
 
-      {/* Load More Button (Only Show if More Questions Exist) */}
       {visibleCount < faqs.length && (
         <div
-          className="flex justify-center text-2xl font-semibold underline cursor-pointer mt-5"
+          className="flex justify-center text-3xl text-gray-600 font-semibold underline cursor-pointer mt-5 mb-10"
           onClick={loadMore}
         >
           Load More...
         </div>
       )}
+      <ContactUs />
     </div>
   );
 }
