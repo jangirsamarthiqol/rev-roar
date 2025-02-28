@@ -5,8 +5,11 @@ import { FaWhatsapp } from "react-icons/fa6";
 
 const ContactUs = () => {
   return (
-    <div className="bg-[#333]">
-      <div className="py-10 mx-35  text-white">
+    <div
+      className="bg-[#333]"
+      style={{ fontFamily: "Varietta Variable" }}
+    >
+      <div className="py-10 mx-35 text-white">
         <h4 className="text-8xl font-light">Contact Us</h4>
         <p className="text-3xl p-3">
           Ready to Rev & Roar? Let's make it happen!
@@ -18,12 +21,30 @@ const ContactUs = () => {
         </div>
         <div className="flex gap-8 items-center ">
           <p className="text-3xl">
-            Follow us on Instagram and Facebookto see what adventure looks like!
+            Follow us on Instagram and Facebook to see what adventure looks like!
           </p>
           <div className="flex gap-3 text-7xl">
-            <FaSquareInstagram />
-            <FaFacebookSquare />
-            <FaWhatsapp />
+            <a
+              href="https://instagram.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaSquareInstagram />
+            </a>
+            <a
+              href="https://facebook.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookSquare />
+            </a>
+            <a
+              href="https://wa.me/8118823650"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
       </div>
