@@ -1,24 +1,25 @@
 // src/components/Enquiry.jsx
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import logo from "../../public/Logo_022.png";
-import bgImg from "../../public/bg-img.jpg";
+import logo from "/Logo_022.png";
+import bgImg from "/bg-img.jpg";
 import ContactUs from "../components/ContactUs";
-import { FaPlus } from "react-icons/fa6";
+import { FaPlus, FaMinus } from "react-icons/fa6";
 
 function Enquiry() {
   const faqs = [
     {
       question: "1. What kind of trips does Rev & Roar specialize in?",
       answer:
-        "We specialize in thrilling bike expeditions, comfortable tempo traveler tours, and group adventures to Ladakh and Spiti. Whether you’re a solo rider, a family, a corporate team, or a group of college friends, we create trips tailored just for you!",
+        "We specialize in thrilling bike expeditions, comfortable tempo traveler tours, and group adventures to Ladakh and Spiti. Whether you're a solo rider, a family, a corporate team, or a group of college friends, we create trips tailored just for you!",
     },
     {
       question: "2. Do I need prior experience for a bike trip?",
       answer:
-        "Not at all! Our bike trips are designed for everyone, from first-timers to seasoned riders. We provide a pre-ride briefing and basic training to ensure you’re comfortable and confident before hitting the road.",
+        "Not at all! Our bike trips are designed for everyone, from first-timers to seasoned riders. We provide a pre-ride briefing and basic training to ensure you're comfortable and confident before hitting the road.",
     },
     {
-      question: "3. What’s included in your packages?",
+      question: "3. What's included in your packages?",
       answer: `Our packages typically include:
 • Accommodation
 • Meals (Breakfast & Dinner)
@@ -51,7 +52,7 @@ We also provide medical support if required.`,
     },
     {
       question: "7. What should I pack for a trip to Ladakh or Spiti?",
-      answer: `Here’s a quick checklist:
+      answer: `Here's a quick checklist:
 • Warm layers, including thermal wear and waterproof jackets.
 • Comfortable, sturdy shoes.
 • Gloves, woolen socks, and caps.
@@ -59,12 +60,12 @@ We also provide medical support if required.`,
 • Personal medicines, including Diamox (for AMS).
 • A power bank and camera to capture the magic!
 
-We’ll provide a detailed packing guide once you book with us.`,
+We'll provide a detailed packing guide once you book with us.`,
     },
     {
       question: "8. Do you allow pillion riders on bike trips?",
       answer:
-        "Absolutely! If you’re not ready to ride solo, you can join as a pillion rider. It’s a fantastic way to enjoy the adventure without worrying about handling a bike. (Terms and conditions applied)",
+        "Absolutely! If you're not ready to ride solo, you can join as a pillion rider. It's a fantastic way to enjoy the adventure without worrying about handling a bike. (Terms and conditions applied)",
     },
     {
       question: "9. What kind of accommodation can I expect?",
@@ -74,11 +75,11 @@ We’ll provide a detailed packing guide once you book with us.`,
     {
       question: "10. Can I customize a trip?",
       answer:
-        "Yes, we offer fully customizable tours! Whether it’s a specific itinerary, a mix of adventure and leisure, or a group size, we’ll design the perfect trip for your needs. Just share your preferences with us, and we’ll handle the rest.",
+        "Yes, we offer fully customizable tours! Whether it's a specific itinerary, a mix of adventure and leisure, or a group size, we'll design the perfect trip for your needs. Just share your preferences with us, and we'll handle the rest.",
     },
     {
       question: "11. Is there any age limit for these trips?",
-      answer: `• Bike trips: Riders must be at least 18 years old with a valid driver’s license.
+      answer: `• Bike trips: Riders must be at least 18 years old with a valid driver's license.
 • Tempo tours: Perfect for all ages, including families with kids or seniors who prefer a comfortable journey.`,
     },
     {
@@ -87,15 +88,15 @@ We’ll provide a detailed packing guide once you book with us.`,
 1. Browse our packages on the website.
 2. Choose your preferred trip.
 3. Contact us via phone, email, or WhatsApp to finalize details.
-4. Secure your spot with a deposit, and you’re all set!`,
+4. Secure your spot with a deposit, and you're all set!`,
     },
     {
       question: "13. What happens if the weather disrupts the trip?",
       answer:
-        "Mountain weather can be unpredictable, but your safety is our priority. If weather conditions disrupt the itinerary, we’ll adjust the plan to ensure you still have a safe and enjoyable experience.",
+        "Mountain weather can be unpredictable, but your safety is our priority. If weather conditions disrupt the itinerary, we'll adjust the plan to ensure you still have a safe and enjoyable experience.",
     },
     {
-      question: "14. What’s your cancellation and refund policy?",
+      question: "14. What's your cancellation and refund policy?",
       answer: `We understand that plans can change. Our cancellation policy is as follows:
 • 30+ days before trip: No refund (but can shift dates)
 • 15-30 days: No refund
@@ -104,7 +105,7 @@ For more details, please refer to our full terms and conditions.`,
     },
     {
       question: "15. How do you ensure safety during bike trips?",
-      answer: `Safety is non-negotiable at Rev & Roar. Here’s how we ensure it:
+      answer: `Safety is non-negotiable at Rev & Roar. Here's how we ensure it:
 • Pre-trip bike checks and basic training.
 • Mandatory safety gear (helmet, gloves, etc.).
 • Experienced guides and mechanics.
@@ -114,7 +115,7 @@ For more details, please refer to our full terms and conditions.`,
     {
       question: "16. Can I bring my own bike for a bike trip?",
       answer:
-        "Of course! If you’re comfortable riding your own bike, feel free to bring it along. We’ll assist with servicing and ensure your bike is road-ready for the journey.",
+        "Of course! If you're comfortable riding your own bike, feel free to bring it along. We'll assist with servicing and ensure your bike is road-ready for the journey.",
     },
     {
       question: "17. What kind of group sizes do you manage?",
@@ -126,7 +127,7 @@ No group is too big or small—we make it work!`,
     {
       question: "18. Do you provide travel insurance?",
       answer:
-        "While we don’t provide travel insurance directly, we highly recommend purchasing one before your trip. It should cover high-altitude travel, medical emergencies, and trip cancellations.",
+        "While we don't provide travel insurance directly, we highly recommend purchasing one before your trip. It should cover high-altitude travel, medical emergencies, and trip cancellations.",
     },
   ];
 
@@ -138,40 +139,45 @@ No group is too big or small—we make it work!`,
 
   return (
     <div
-      className="translate-y-15 w-full h-full bg-cover bg-center"
+      className="w-full h-full bg-cover bg-center pt-16 md:pt-20"
       style={{
         backgroundImage: `url(${bgImg})`,
         fontFamily: "'Varietta Variable', sans-serif",
       }}>
       <div
-        className="flex items-center justify-start p-15"
+        className="flex items-center justify-start p-4 md:p-10 lg:p-15"
         style={{ fontFamily: "'Varietta Variable', sans-serif" }}>
-        <h1 className="text-9xl">ENQUIRY</h1>
-        <img className="h-50 -ml-4" src={logo} alt="Logo" />
+        <h1 className="text-4xl md:text-6xl lg:text-9xl">ENQUIRY</h1>
+        <img className="h-16 md:h-32 lg:h-50 -ml-2 md:-ml-4" src={logo} alt="Logo" />
       </div>
-
-
-      <div id="faqs" className="p-20">
+      <ContactUs />
+      <div id="faqs" className="p-4 md:p-10 lg:p-20">
         {faqs.map((faq, index) => (
-          <div key={index} className="mb-8">
+          <div key={index} className="mb-4 md:mb-8">
             <div
-              className="flex justify-between items-center cursor-pointer"
+              className="flex justify-between items-center  bg-opacity-10 p-3 rounded-md"
               onClick={() => handleToggle(index)}>
-              <h2 className="text-3xl font-semibold">{faq.question}</h2>
-              <FaPlus className="text-xl" />
+              <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold pr-2">
+                {faq.question}
+              </h2>
+              {activeIndex === index ? (
+                <FaMinus className="text-lg flex-shrink-0" />
+              ) : (
+                <FaPlus className="text-lg flex-shrink-0" />
+              )}
             </div>
             <div
               className={`transition-all duration-300 ease-in-out transform ${
                 activeIndex === index
-                  ? "opacity-100 translate-y-0 h-auto"
+                  ? "opacity-100 translate-y-0 h-auto mt-2 p-3  bg-opacity-20 rounded-md"
                   : "opacity-0 -translate-y-4 h-0 overflow-hidden"
               }`}>
-              <p className="mt-2 whitespace-pre-line text-2xl">
+              <p className="whitespace-pre-line text-base md:text-xl lg:text-2xl">
                 {faq.answer.split("\n").map((line, i) => (
                   <span
                     key={i}
                     className={`block mb-1 ${
-                      line.trim().startsWith("•") ? "pl-5" : ""
+                      line.trim().startsWith("•") ? "pl-4" : ""
                     }`}>
                     {line}
                   </span>
