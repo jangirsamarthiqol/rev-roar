@@ -9,7 +9,7 @@ import { RiArrowLeftWideLine, RiArrowRightWideFill } from "react-icons/ri";
 const images = [img1, img2, img3];
 const quotes = [
   "Thrilling High-altitude Passes with Expert Guides.",
-  "The hum of your bike engine as you conquer Khardung LA.",
+  "The hum of your bike engine as you conquer Khardung La.",
   "A shared laugh with friends under the starry skies of Spiti.",
 ];
 

@@ -13,8 +13,8 @@ function Home() {
         alt="Background"
       />
       <img
-        className="absolute top-20 left-20 h-130"
-        src="/Logo_022.png"
+        className="absolute top-20 left-20 h-90"
+        src="/Logo_0222.png"
         alt="Logo"
       />
 

@@ -1,6 +1,6 @@
 // src/components/Enquiry.jsx
 import React, { useState } from "react";
-import logo from "../../public/Logo_022.png";
+import logo from "../../public/Logo_0222.png";
 import bgImg from "../../public/bg-img.jpg";
 import ContactUs from "../components/ContactUs";
 
@@ -142,60 +142,52 @@ function Enquiry() {
     setVisibleCount((prevCount) => prevCount + 6); // Show 6 more on each click
   };
 
-  return (
-    <div
-      className="translate-y-15 w-full h-full bg-cover bg-center "
-      style={{ backgroundImage: `url(${bgImg})` }}
-    >
-      <div className="flex items-center justify-center mb-5">
-        <h1 className="text-9xl">ENQUIRY</h1>
-        <img className="h-50 -ml-4" src={logo} alt="" />
-      </div>
-      <div id="faqs" className="p-20">
-        {faqs.slice(0, visibleCount).map((faq, index) => (
-          <div key={index} className="mb-8">
-            <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() => handleToggle(index)}
-            >
-              <h2 className="text-3xl font-semibold">{faq.question}</h2>
-              <FaPlus className="text-xl" />
-            </div>
-            <div
-              className={`transition-all duration-300 ease-in-out transform ${
-                activeIndex === index
-                  ? "opacity-100 translate-y-0 h-auto"
-                  : "opacity-0 -translate-y-4 h-0 overflow-hidden"
-              }`}
-            >
-              <p className="mt-2 whitespace-pre-line text-2xl">
-                {faq.answer.split("\n").map((line, i) => (
-                  <span
-                    key={i}
-                    className={`block mb-1 ${
-                      line.trim().startsWith("•") ? "pl-5" : "" // Indent bullet points
-                    }`}
-                  >
-                    {line}
-                  </span>
-                ))}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {visibleCount < faqs.length && (
-        <div
-          className="flex justify-center text-3xl text-gray-600 font-semibold underline cursor-pointer mt-5 mb-10"
-          onClick={loadMore}
-        >
-          Load More...
-        </div>
-      )}
-      <ContactUs />
+ return (
+  <div
+    className="translate-y-15 w-full h-full bg-cover bg-center"
+    style={{ backgroundImage: `url(${bgImg})` }}
+  >
+    <div className="flex ml-14 p-4 mb-4">
+      <h1 className="text-9xl">ENQUIRY</h1>
+      <img className="h-30" src={logo} alt="" />
     </div>
-  );
+    <div id="faqs" className="px-20">
+      {faqs.map((faq, index) => (
+        <div key={index} className="mb-8">
+          <div
+            className="flex justify-between items-center cursor-pointer"
+            onClick={() => handleToggle(index)}
+          >
+            <h2 className="text-3xl font-semibold">{faq.question}</h2>
+            <FaPlus className="text-xl" />
+          </div>
+          <div
+            className={`ml-5 transition-all duration-300 ease-in-out transform ${
+              activeIndex === index
+                ? "opacity-100 translate-y-0 h-auto"
+                : "opacity-0 -translate-y-4 h-0 overflow-hidden"
+            }`}
+          >
+            <p className="mt-2 whitespace-pre-line text-2xl">
+              {faq.answer.split("\n").map((line, i) => (
+                <span
+                  key={i}
+                  className={`block mb-1 ${
+                    line.trim().startsWith("•") ? "pl-5" : ""
+                  }`}
+                >
+                  {line}
+                </span>
+              ))}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <ContactUs />
+  </div>
+);
+
 }
 
 export default Enquiry;
