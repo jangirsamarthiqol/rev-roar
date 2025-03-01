@@ -9,13 +9,11 @@ import img3 from "/home-bg3.jpg";
 
 // Stamp images for the top "Picture this" section
 import stampImg1 from "/stamp/stamp-11.png";
-import stampImg2 from "/stamp/stamp-11.png";
-import stampImg3 from "/stamp/stamp-11.png";
 
 // Stamps for "OUR ADVENTURES"
-import stampBike from "/stamp/stamp-11.png";
-import stampTempo from "/stamp/stamp-11.png";
-import stampCorporate from "/stamp/stamp-11.png";
+import stampBike from "/adventure-img.jpg";
+import stampTempo from "/adventure-img.jpg";
+import stampCorporate from "/adventure-img.jpg";
 
 // Images for the "Destinations We Call Home" section
 import ladakhImg from "/pexels-julia-volk-5204921.jpg";
@@ -35,17 +33,49 @@ const card_info = [
   { img: img3, desc: "Thrilling High-altitude Passes with Expert Guides." },
 ];
 
+const adventures = [
+  {
+    img: stampBike,
+    img_tag: "Bike Trips",
+    desc: "Feel the roar of the engine. Feel alive.",
+    info: [
+      "Explore Ladakh or Spiti on a Royal Enfield or Himalayan.",
+      "Safety first! We’ve got expert guides and a backup vehicle at every step.",
+      "AMS prevention stops and detailed briefings because your health matters.",
+    ],
+  },
+
+  {
+    img: stampTempo,
+    img_tag: "Tempo Traveler Trips",
+    desc: "Adventure is for everyone comfort included.",
+    info: [
+      "Perfect for families, friends, or groups who want to explore the mountains without the hassle.",
+      "Chill with your crew while we handle the rough terrains.",
+    ],
+  },
+  {
+    img: stampCorporate,
+    img_tag: "Corporate & College Tours",
+    desc: " From icebreaker activities to adrenaline-pumping adventures.",
+    info: [
+      "Boost team spirit with fun challenges and bonding experiences.",
+      "Safe, well-organized itineraries for large groups.",
+    ],
+  },
+];
+
 function AboutUs() {
   return (
     <div
-      className="min-h-screen bg-cover bg-center pt-16 md:pt-20 text-gray-800"
+      className="min-h-screen bg-cover bg-center pt-16 md:pt-36 text-gray-800"
       style={{
         backgroundImage: `url(${bgImg})`,
         fontFamily: "Varietta Variable, sans-serif",
       }}
     >
       {/* Header: ABOUT + Logo */}
-      <div className="flex items-center justify-start px-4 md:px-11 lg:px-16 py-6 md:py-11">
+      <div className="flex items-center justify-start px-4 md:px-11 lg:px-36 py-6 md:py-11">
         <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold mr-4">
           ABOUT
         </h1>
@@ -61,33 +91,36 @@ function AboutUs() {
         {/* Intro Text */}
         <p className="text-xl md:text-2xl mb-6 leading-relaxed font-medium">
           At Rev & Roar, we don't just plan trips—
-          <em className="font-semibold text-[#FF4C00]">
-            {" "}
-            we craft life-changing experiences.
-          </em>{" "}
-          Picture this:
+          <em> we craft life-changing experiences.</em> Picture this:
         </p>
 
         {/* Stamp & Card Images */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {card_info.map((card, index) => (
             <div
               key={index}
-              className="relative border flex flex-col items-center bg-opacity-70 transform hover:scale-105 transition-transform duration-300"
+              className="relative flex flex-col items-center bg-opacity-70 transform hover:scale-105 transition-transform duration-300"
             >
               {/* Stamp Image (Background) */}
-              <img
-                src={stampImg1}
-                alt="Stamp 1"
-                className="w-32 h-32 md:w-90 md:h-126 object-cover"
-              />
+              <div className="relative">
+                <img
+                  src={stampImg1}
+                  alt="Stamp 1"
+                  className="w-full h-auto md:w-100 md:h-140 object-cover"
+                />
 
-              {/* Card Image (Over Stamp) */}
-              <img
-                src={card.img}
-                alt={`Card ${index}`}
-                className="absolute  transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 object-cover"
-              />
+                {/* Card Image and description (Over Stamp) */}
+                <div className="absolute w-full h-full top-0 left-0 p-6 flex flex-col items-center">
+                  <img
+                    src={card.img}
+                    alt={`Card ${index}`}
+                    className="border-2 border-black w-16 h-16 md:w-[95%] md:h-[80%] object-cover"
+                  />
+                  <p className="text-2xl mx-5 my-7 h-[20%] md:text-2xl">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -102,51 +135,75 @@ function AboutUs() {
       </div>
 
       {/* OUR ADVENTURES Section */}
-      <div className="mt-12 md:mt-20 px-4 md:px-11 lg:px-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 inline-block pb-2">
+      <div className="mt-12 md:mt-20 px-4 md:px-11 lg:px-36">
+        <h2 className="text-4xl md:text-8xl font-bold mb-8 inline-block pb-2">
           OUR ADVENTURES
         </h2>
 
         {/* Bike Trips */}
-        <div className="flex flex-col md:flex-row items-center gap-6 mb-11 backdrop-blur-sm p-6 rounded-lg ">
-          <img
-            src={stampBike}
-            alt="Bike Trips Stamp"
-            className="w-28 h-28 md:w-60 md:h-84 object-cover flex-shrink-0"
-          />
-          <div>
-            <ul className="list-disc list-inside text-lg md:text-xl text-gray-800 leading-relaxed space-y-2">
-              <li>Explore Ladakh or Spiti on a Royal Enfield or Himalayan.</li>
-              <li>
-                Safety first! We've got expert guides and a backup vehicle.
-              </li>
-              <li>
-                AMS prevention stops and detailed briefings because your health
-                matters.
-              </li>
-            </ul>
+        {adventures.map((adventure, index) => (
+          <div
+            key={index}
+            className="flex flex-col md:flex-row items-center gap-4 md:gap-8 mb-8"
+          >
+            {/* Stamp Image with Adventure Info Overlay */}
+            <div className="relative">
+              <img
+                src={stampImg1}
+                alt={adventure.img_tag}
+                className="w-75 h-105 object-cover"
+              />
+              <div className="absolute flex flex-col items-center top-0 left-0 w-full h-full p-4">
+                <img
+                  className="w-[100%] h-[70%] object-cover border-2 border-black"
+                  src={adventure.img}
+                  alt=""
+                />
+                <div className="mt-2 h-[30%] w-[90%]">
+                  <h3 className="text-2xl md:text-3xl font-bold ">
+                    {adventure.img_tag}
+                  </h3>
+                  <p className="text-md md:text-sm">{adventure.desc}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Adventure Info */}
+            <div className="p-4 md:p-6 w-full md:w-2/3">
+              <ul className="space-y-4 ml-10">
+                {adventure.info.map((info, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <div>
+                      <p className="text-lg md:text-3xl">
+                        <span className="font-bold"> ●</span> {info}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
 
       {/* Why Travel With us */}
-      <div className="mt-12 md:mt-20 px-4 md:px-11 lg:px-20">
+      <div className="mt-12 md:mt-20 px-4 md:px-11 lg:px-36">
         <h3 className="text-5xl mb-5">Why Travel With Us</h3>
-        <p className="text-3xl w-[45%]">
+        <p className="text-3xl w-[65%]">
           We’re not just another travel company. We’re your partners in
           adventure. Here’s why our customers swear by us:
         </p>
         <p className="mt-4 text-3xl">
           <span className="block mb-2 pl-4">
-            • <strong>Safety First:</strong> Backup vehicles, AMS prevention
+            <strong>Safety First:</strong> Backup vehicles, AMS prevention
             stops, and experienced guides to handle every challenge.
           </span>
           <span className="block mb-2 pl-4">
-            • <strong>Customized Fun:</strong> Whether you’re a thrill-seeker or
+            <strong>Customized Fun:</strong> Whether you’re a thrill-seeker or
             prefer relaxed exploration, we tailor trips to your vibe.
           </span>
           <span className="block mb-2 pl-4 w-[75%]">
-            • <strong>Local Expertise:</strong> We know these mountains like the
+            <strong>Local Expertise:</strong> We know these mountains like the
             back of our hand. Expect secret spots, authentic experiences, and
             insider stories.
           </span>
@@ -155,7 +212,7 @@ function AboutUs() {
 
       {/* DESTINATIONS WE CALL HOME Section */}
       <div className="mt-12 md:mt-20">
-        <h2 className="text-4xl md:text-7xl font-semibold mb-8 inline-block pb-2 px-4 md:px-11 lg:px-16">
+        <h2 className="text-4xl md:text-7xl font-semibold mb-8 inline-block pb-2 px-4 md:px-11 lg:px-36">
           DESTINATIONS WE CALL HOME
         </h2>
         {/* Ladakh Section */}
@@ -167,7 +224,7 @@ function AboutUs() {
             className="absolute inset-0 w-screen h-full object-cover"
           />
           {/* Content Overlay at Bottom */}
-          <div className="absolute bottom-0 left-0 right-0 z-10 flex gap-1 p-6 md:p-12">
+          <div className="absolute bottom-0 left-0 right-0 flex gap-1 p-6 md:p-12">
             <h1 className="text-5xl w-3/4 md:text-9xl font-bold text-white drop-shadow-lg">
               Ladakh
             </h1>
@@ -187,18 +244,19 @@ function AboutUs() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Content Overlay at Top */}
-          <div className="absolute top-0 right-0  z-10 flex gap-1 p-6 md:p-12">
+          <div className="absolute top-0 right-0 flex gap-1 p-6 md:p-12">
             <p className="mt-4 w-1/4 text-white text-lg md:text-xl max-w-xl drop-shadow">
               A remote wonderland with crystal-clear skies, ancient monasteries,
               and landscapes that belong in a dream...
             </p>
-            <h1 className="text-5xl text-t w-3/4 md:text-9xl font-bold text-white drop-shadow-lg">
+            <h1 className="text-5xl text-right w-3/4 md:text-9xl font-bold text-white drop-shadow-lg">
               Spiti
             </h1>
           </div>
         </div>
       </div>
 
+      {/* QUOTE */}
       <div className="flex justify-center items-center p-10 mt-20">
         <p className="italic text-xl md:text-4xl">
           "It's not just the destination—it's how you get there. With Rev &
@@ -207,29 +265,29 @@ function AboutUs() {
       </div>
 
       {/* SAFETY & SUPPORT Section */}
-      <div className="mt-12 px-4 md:px-11 lg:px-16 pb-11">
+      <div className="mt-12 px-4 md:px-11 lg:px-16 pb-11 mb-10">
         <div className="backdrop-blur-sm p-6 md:p-11 rounded-lg">
           <h2 className="text-4xl md:text-6xl font-bold mb-4 ">
             SAFETY &amp; SUPPORT
           </h2>
-          <p className="text-xl md:text-3xl text-gray-800 mb-6">
+          <p className="text-xl md:text-3xl text-gray-800 mb-16">
             Adventure doesn't have to mean taking unnecessary risks.
           </p>
-          <ul className="space-y-4">
+          <ul className="space-y-4 ml-10">
             <li className="flex items-start space-x-3">
               <div>
-                <strong className="text-xl md:text-2xl">
-                  Backup Vehicles:
-                </strong>
-                <p className="text-lg md:text-xl text-gray-800">
-                  Always there to carry your luggage or assist in emergencies.
+                <p className="text-xl md:text-2xl">
+                  <span className="font-bold"> ●Backup Vehicles:</span> Always
+                  there to carry your luggage or assist in emergencies.
                 </p>
               </div>
             </li>
             <li className="flex items-start space-x-3">
               <div>
-                <strong className="text-xl md:text-2xl">AMS Prevention:</strong>
-                <p className="text-lg md:text-xl text-gray-800">
+                <p className="text-xl md:text-2xl">
+                  <span className="text-xl font-bold md:text-2xl">
+                    ●AMS Prevention:
+                  </span>{" "}
                   Dedicated acclimatization days and expert guidance to keep you
                   healthy.
                 </p>
@@ -237,8 +295,10 @@ function AboutUs() {
             </li>
             <li className="flex items-start space-x-3">
               <div>
-                <strong className="text-xl md:text-2xl">Trained Team:</strong>
-                <p className="text-lg md:text-xl text-gray-800">
+                <p className="text-xl md:text-2xl">
+                  <span className="text-xl font-bold md:text-2xl">
+                    ●Trained Team:
+                  </span>{" "}
                   Guides equipped with first aid and local knowledge.
                 </p>
               </div>
