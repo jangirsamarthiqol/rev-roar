@@ -41,7 +41,7 @@ function Gallery() {
   return (
     <div className="gallery-container">
       {/* Gallery Section */}
-      <div className="p-8">
+      {/* <div className="p-8">
         <h1 className="text-4xl font-bold mb-4">GALLERY</h1>
         <p className="text-xl mb-8">Check out our gallery!</p>
 
@@ -74,7 +74,7 @@ function Gallery() {
             <p className="text-center mt-2">Spiti</p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Slider Section */}
       <div className="relative w-full h-[400px] sm:h-[500px] md:h-[700px] overflow-hidden bg-black flex items-center justify-center">
