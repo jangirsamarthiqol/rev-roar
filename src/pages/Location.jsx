@@ -14,7 +14,7 @@ function Location() {
   return (
     <section className="w-full">
       {/* Top Header Section */}
-      <div className="relative flex items-center justify-between px-4 md:px-8 py-6">
+      <div className="relative flex items-center justify-between px-4 md:px-8">
         <h2 className="text-xl md:text-3xl font-bold uppercase tracking-wide">
           DESTINATIONS WE CALL HOME
         </h2>
@@ -51,65 +51,44 @@ function Location() {
           />
         </div>
       </div>
-
       {/* Ladakh Section */}
-      <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+      <div className="relative w-full h-[80vh] md:h-[70vh] overflow-hidden">
         {/* Background Image */}
         <img
           src={ladakhImg}
           alt="Ladakh"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-screen h-full object-cover"
         />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0  bg-opacity-30" />
-
-        {/* Content Overlay */}
-        <div className="relative z-10 flex flex-col justify-center h-full p-6 md:p-12">
-          <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
+        {/* Content Overlay at Bottom */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 flex gap-1 p-6 md:p-12">
+          <h1 className="text-5xl w-3/4 md:text-9xl font-bold text-white drop-shadow-lg">
             Ladakh
           </h1>
-          <p className="mt-4 text-white text-lg md:text-xl max-w-xl drop-shadow">
+          <p className="mt-4 w-1/4 text-white text-lg md:text-xl max-w-xl drop-shadow">
             Think Pangong Tso's magical hue, the thrill of Khardung La, and the
             warm smiles of Nubra Valley...
           </p>
         </div>
-
-        {/* Stamp in the corner (optional) */}
-        <img
-          src={stampImg}
-          alt="Stamp"
-          className="absolute bottom-4 left-4 w-16 h-16 object-contain"
-        />
       </div>
 
       {/* Spiti Section */}
-      <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden mt-8">
+      <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
         {/* Background Image */}
         <img
           src={spitiImg}
           alt="Spiti"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0  bg-opacity-30" />
-
-        {/* Content Overlay */}
-        <div className="relative z-10 flex flex-col justify-center h-full p-6 md:p-12">
-          <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
-            Spiti
-          </h1>
-          <p className="mt-4 text-white text-lg md:text-xl max-w-xl drop-shadow">
+        {/* Content Overlay at Top */}
+        <div className="absolute top-0 right-0  z-10 flex gap-1 p-6 md:p-12">
+          <p className="mt-4 w-1/4 text-white text-lg md:text-xl max-w-xl drop-shadow">
             A remote wonderland with crystal-clear skies, ancient monasteries,
             and landscapes that belong in a dream...
           </p>
+          <h1 className="text-5xl text-right w-3/4 md:text-9xl font-bold text-white drop-shadow-lg">
+            Spiti
+          </h1>
         </div>
-
-        {/* Stamp in the corner (optional) */}
-        <img
-          src={stampImg}
-          alt="Stamp"
-          className="absolute bottom-4 right-4 w-16 h-16 object-contain"
-        />
       </div>
     </section>
   );

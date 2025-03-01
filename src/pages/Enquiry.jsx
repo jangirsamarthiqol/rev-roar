@@ -155,15 +155,15 @@ No group is too big or small—we make it work!`,
         {faqs.map((faq, index) => (
           <div key={index} className="mb-4 md:mb-8">
             <div
-              className="flex justify-between items-center  bg-opacity-10 p-3 rounded-md"
+              className="flex justify-between items-center cursor-pointer bg-opacity-10 p-3 rounded-md"
               onClick={() => handleToggle(index)}>
               <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold pr-2">
                 {faq.question}
               </h2>
               {activeIndex === index ? (
-                <FaMinus className="text-lg flex-shrink-0" />
+                <FaMinus className="text-2xl flex-shrink-0" />
               ) : (
-                <FaPlus className="text-lg flex-shrink-0" />
+                <FaPlus className="text-2xl flex-shrink-0" />
               )}
             </div>
             <div
@@ -172,7 +172,7 @@ No group is too big or small—we make it work!`,
                   ? "opacity-100 translate-y-0 h-auto mt-2 p-3  bg-opacity-20 rounded-md"
                   : "opacity-0 -translate-y-4 h-0 overflow-hidden"
               }`}>
-              <p className="whitespace-pre-line text-base md:text-xl lg:text-2xl">
+              <p className="whitespace-pre-line mr-30 pr-20 text-base md:text-xl lg:text-2xl">
                 {faq.answer.split("\n").map((line, i) => (
                   <span
                     key={i}
