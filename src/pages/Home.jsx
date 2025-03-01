@@ -2,7 +2,7 @@
 // src/components/Home.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import HomeSlider from "../components/HomeSLider";
+import HomeSlider from "../components/HomeSlider.jsx";
 import ContactUs from "../components/ContactUs";
 import TourPage from "../components/TourPage";
 
