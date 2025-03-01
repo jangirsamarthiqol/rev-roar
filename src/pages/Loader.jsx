@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import './Loader.css';
 import lionLogo from '../assets/lion-logo1.png'; // Adjust the path as needed
