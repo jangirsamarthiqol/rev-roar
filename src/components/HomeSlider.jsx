@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { RiArrowLeftWideLine, RiArrowRightWideFill } from "react-icons/ri";
 
 // Gallery images (stamp & logo)
-import stampImage from "/stamp/stamp-11.png"; // Update this path
-import logoImage from "/stamp/stamp-11.png";   // Update this path
+// import stampImage from "/stamp/stamp-11.png"; // Update this path
+// import logoImage from "/stamp/stamp-11.png";   // Update this path
 
 // Slider images
 import img1 from "/pexels-julia-volk-5204921.jpg"; // Update this path
