@@ -150,7 +150,7 @@ No group is too big or small—we make it work!`,
         <h1 className="text-4xl md:text-6xl lg:text-9xl">ENQUIRY</h1>
         <img className="h-16 md:h-32 lg:h-50 -ml-2 md:-ml-4" src={logo} alt="Logo" />
       </div>
-      <ContactUs />
+      {/* <ContactUs /> */}
       <div id="faqs" className="p-4 md:p-10 lg:p-20">
         {faqs.map((faq, index) => (
           <div key={index} className="mb-4 md:mb-8">
