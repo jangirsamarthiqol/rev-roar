@@ -40,12 +40,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar fixed top-0 z-10 w-full transition-all duration-300">
+    <nav className="navbar fixed top-0 z-20 w-full transition-all duration-300 ">
       {/* Desktop Navigation - preserved original design with active highlights */}
-      <div className="hidden md:flex justify-between mx-50 px-6">
+      <div className="hidden md:flex justify-between mx-50 px-6 py-1">
         <Link
           to="/"
-          className={`text-2xl rounded-xs text-white p-2 transition-colors duration-300 ${
+          className={`text-[28px] rounded-[2px] text-white p-2 transition-colors duration-300 ${
             isActive('/') ? 'bg-[#FF4C00]' : 'hover:bg-[#FF4C00]/80'
           }`}
         >
@@ -53,7 +53,7 @@ function Navbar() {
         </Link>
         <Link
           to="/location"
-          className={`text-2xl rounded-xs text-white p-2 transition-colors duration-300 ${
+          className={`text-[28px] rounded-[2px] text-white p-2 transition-colors duration-300 ${
             isActive('/location') ? 'bg-[#FF4C00]' : 'hover:bg-[#FF4C00]/80'
           }`}
         >
@@ -61,7 +61,7 @@ function Navbar() {
         </Link>
         <Link
           to="/gallery"
-          className={`text-2xl rounded-xs text-white p-2 transition-colors duration-300 ${
+          className={`text-[28px] rounded-[2px] text-white p-2 transition-colors duration-300 ${
             isActive('/gallery') ? 'bg-[#FF4C00]' : 'hover:bg-[#FF4C00]/80'
           }`}
         >
@@ -69,7 +69,7 @@ function Navbar() {
         </Link>
         <Link
           to="/enquiry"
-          className={`text-2xl rounded-xs text-white p-2 transition-colors duration-300 ${
+          className={`text-[28px] rounded-[2px] text-white p-2 transition-colors duration-300 ${
             isActive('/enquiry') ? 'bg-[#FF4C00]' : 'hover:bg-[#FF4C00]/80'
           }`}
         >
@@ -77,7 +77,7 @@ function Navbar() {
         </Link>
         <Link
           to="/about-us"
-          className={`text-2xl rounded-xs text-white p-2 transition-colors duration-300 ${
+          className={`text-[28px] rounded-[2px] text-white p-2 transition-colors duration-300 ${
             isActive('/about-us') ? 'bg-[#FF4C00]' : 'hover:bg-[#FF4C00]/80'
           }`}
         >

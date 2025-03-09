@@ -1,6 +1,6 @@
 // src/components/Enquiry.jsx
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import logo from "/Logo_022.png";
 import bgImg from "/bg-img.jpg";
 import ContactUs from "../components/ContactUs";
@@ -139,24 +139,43 @@ No group is too big or small—we make it work!`,
 
   return (
     <div
-      className="w-full h-full bg-cover bg-center pt-16 md:pt-20"
+      className="relative w-full h-full bg-cover bg-center pt-16 md:pt-20"
       style={{
         backgroundImage: `url(${bgImg})`,
         fontFamily: "'Varietta Variable', sans-serif",
-      }}>
+      }}
+    >
+      {/* Header with Animated "ENQUIRY" and Logo */}
       <div
-        className="flex items-center justify-start p-4 md:p-10 lg:p-15"
-        style={{ fontFamily: "'Varietta Variable', sans-serif" }}>
-        <h1 className="text-4xl md:text-6xl lg:text-9xl">ENQUIRY</h1>
-        <img className="h-16 md:h-32 lg:h-50 -ml-2 md:-ml-4" src={logo} alt="Logo" />
+        className="flex items-center justify-center p-4 md:p-10 lg:p-15"
+        style={{ fontFamily: "'Varietta Variable', sans-serif" }}
+      >
+        <motion.h1
+          className="text-4xl md:text-6xl lg:text-9xl"
+          initial={{ clipPath: "inset(0 100% 0 100%)", opacity: 0, x: -100 }}
+          animate={{ clipPath: "inset(0 0 0 0)", opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          ENQUIRY
+        </motion.h1>
+        <motion.img
+          className="h-16 md:h-32 lg:h-50 -ml-2 md:-ml-4"
+          src={logo}
+          alt="Logo"
+          initial={{ clipPath: "inset(0 100% 0 100%)", opacity: 0, x: 100 }}
+          animate={{ clipPath: "inset(0 0 0 0)", opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        />
       </div>
-      {/* <ContactUs /> */}
+
+      {/* FAQs Section */}
       <div id="faqs" className="p-4 md:p-10 lg:p-20">
         {faqs.map((faq, index) => (
           <div key={index} className="mb-4 md:mb-8">
             <div
               className="flex justify-between items-center cursor-pointer bg-opacity-10 p-3 rounded-md"
-              onClick={() => handleToggle(index)}>
+              onClick={() => handleToggle(index)}
+            >
               <h2 className="text-lg md:text-2xl lg:text-3xl font-semibold pr-2">
                 {faq.question}
               </h2>
@@ -169,16 +188,18 @@ No group is too big or small—we make it work!`,
             <div
               className={`transition-all duration-300 ease-in-out transform ${
                 activeIndex === index
-                  ? "opacity-100 translate-y-0 h-auto mt-2 p-3  bg-opacity-20 rounded-md"
+                  ? "opacity-100 translate-y-0 h-auto mt-2 p-3 bg-opacity-20 rounded-md"
                   : "opacity-0 -translate-y-4 h-0 overflow-hidden"
-              }`}>
+              }`}
+            >
               <p className="whitespace-pre-line mr-30 pr-20 text-base md:text-xl lg:text-2xl">
                 {faq.answer.split("\n").map((line, i) => (
                   <span
                     key={i}
                     className={`block mb-1 ${
                       line.trim().startsWith("•") ? "pl-4" : ""
-                    }`}>
+                    }`}
+                  >
                     {line}
                   </span>
                 ))}

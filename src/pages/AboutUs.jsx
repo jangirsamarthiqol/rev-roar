@@ -1,5 +1,6 @@
 // src/pages/AboutUs.jsx
 import React from "react";
+import { motion } from "framer-motion";
 import bgImg from "/bg-img.jpg";
 import logo from "/Logo_022.png";
 
@@ -74,15 +75,23 @@ function AboutUs() {
         fontFamily: "Varietta Variable, sans-serif",
       }}
     >
-      {/* Header: ABOUT + Logo */}
+      {/* Header: ABOUT + Logo with Animated Transition */}
       <div className="flex items-center justify-start px-4 md:px-11 lg:px-36 py-6 md:py-11">
-        <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold mr-4">
+        <motion.h1
+          className="text-5xl md:text-7xl lg:text-9xl font-bold mr-4"
+          initial={{ clipPath: "inset(0 100% 0 100%)", opacity: 0, x: -100 }}
+          animate={{ clipPath: "inset(0 0 0 0)", opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
           ABOUT
-        </h1>
-        <img
+        </motion.h1>
+        <motion.img
           className="h-16 md:h-32 lg:h-40 object-contain"
           src={logo}
           alt="Rev & Roar Logo"
+          initial={{ clipPath: "inset(0 100% 0 100%)", opacity: 0, x: 100 }}
+          animate={{ clipPath: "inset(0 0 0 0)", opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
         />
       </div>
 

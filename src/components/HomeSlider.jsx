@@ -8,9 +8,9 @@ import { RiArrowLeftWideLine, RiArrowRightWideFill } from "react-icons/ri";
 // import logoImage from "/stamp/stamp-11.png";   // Update this path
 
 // Slider images
-import img1 from "/pexels-julia-volk-5204921.jpg"; // Update this path
+import img1 from "/pexels-tashi-namgyal-19161220-6492212.jpg"; // Update this path
 import img2 from "/pexels-julia-volk-5204921.jpg"; // Update this path
-import img3 from "/pexels-julia-volk-5204921.jpg"; // Update this path
+import img3 from "/pexels-dhruv-jangid-2945224-30255573.jpg"; // Update this path
 
 const sliderImages = [img1, img2, img3];
 const quotes = [
@@ -77,7 +77,7 @@ function Gallery() {
       </div> */}
 
       {/* Slider Section */}
-      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[700px] overflow-hidden bg-black flex items-center justify-center">
+      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[750px] overflow-hidden bg-black flex items-center justify-center">
         <div className="relative w-full h-full flex items-center">
           {/* Left Arrow */}
           <button
@@ -92,7 +92,7 @@ function Gallery() {
             <motion.div
               className="flex h-full"
               animate={{ x: `-${index * 100}%` }}
-              transition={{ type: "spring", stiffness: 60 }}
+              transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
             >
               {sliderImages.map((img, i) => (
                 <div key={i} className="w-full flex-shrink-0 relative">
@@ -103,7 +103,7 @@ function Gallery() {
                   />
                   {i === index && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 p-4">
-                      <p className="text-white text-base sm:text-2xl md:text-3xl font-semibold text-center px-2">
+                      <p className="text-white text-base sm:text-2xl md:text-[52px] font-normal font-mono text-center px-2 leading-[60px]">
                         {quotes[i]}
                       </p>
                     </div>

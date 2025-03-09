@@ -15,6 +15,7 @@ import logoImage from "/lion-logo.png"; // Path to your logo image
 import img1 from "/home-bg1.jpg";
 import img2 from "/home-bg2.jpg";
 import img3 from "/home-bg3.jpg";
+import ContactUs from "../components/ContactUs";
 
 function Gallery() {
   // Slider variables and state
@@ -45,22 +46,22 @@ function Gallery() {
 
   return (
     <div
-      className="gallery-container p-8 min-h-screen bg-cover bg-center"
+      className="gallery-container  min-h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Gallery Title */}
-      <h1 className="text-4xl font-bold mb-4 text-white">GALLERY</h1>
-      <p className="text-xl mb-8 text-white">
+      <h1 className="text-4xl p-8 font-bold mb-4 text-white">GALLERY</h1>
+      <p className="text-xl p-8 mb-8 text-white">
         A Picture is Worth a Thousand Adventures
       </p>
-      <p className="mb-4 text-white">
+      <p className="mb-4 p-8 text-white">
         Explore our gallery featuring glowing sunsets over Pangong Lake, joyful
         group shots in Spiti, and the sheer thrill of biking through the
         Himalayas.
       </p>
 
       {/* Gallery Images Section */}
-      <div className="flex gap-8">
+      <div className="flex gap-8 p-8">
         <div className="image-container relative">
           <img
             src={stampImage}
@@ -90,7 +91,7 @@ function Gallery() {
       </div>
 
       {/* Testimonials */}
-      <div className="testimonials mt-12 text-white">
+      <div className="testimonials mt-12 p-8 text-white">
         <h2 className="text-2xl font-semibold mb-4">TESTIMONIALS</h2>
         <div className="testimonial mb-6">
           <div className="flex items-center gap-4">
@@ -144,7 +145,9 @@ function Gallery() {
 
       {/* Image Slider Section */}
       <HomeSlider />
+      <ContactUs />
     </div>
+    
   );
 }
 
