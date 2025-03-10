@@ -145,7 +145,7 @@ const TourPage = () => {
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-blue-600 text-white rounded transition-all duration-200"
+                className="px-6 py-3 bg-orange-600 text-white rounded transition-all duration-200"
                 disabled={submitting}
               >
                 {submitting ? "Submitting..." : "Submit"}

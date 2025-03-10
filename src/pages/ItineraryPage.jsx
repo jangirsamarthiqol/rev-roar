@@ -22,7 +22,7 @@ console.log("ItineraryPage")
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Hero Section */}
-      <div className="relative bg-blue-900 text-white py-20 px-4 overflow-hidden">
+      <div className="relative bg-orange-900 text-white py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           {/* <Image
             src="/placeholder.svg?height=600&width=1200"
@@ -76,11 +76,11 @@ console.log("ItineraryPage")
               </div>
               <div className="md:w-2/3">
                 <h2 className="text-3xl font-bold mb-4 flex items-center">
-                  <Mountain className="mr-2 text-blue-600" />
+                  <Mountain className="mr-2 text-orange-600" />
                   {group.category}
                 </h2>
                 <p className="text-lg text-gray-700 mb-4">{group.description}</p>
-                <div className="flex items-center text-blue-600">
+                <div className="flex items-center text-orange-600">
                   <MapPin className="mr-2" size={18} />
                   <span className="font-medium">Himalayas, India</span>
                 </div>
@@ -112,14 +112,14 @@ console.log("ItineraryPage")
                         {option.highlights.map((highlight, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                            className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium"
                           >
                             {highlight}
                           </span>
                         ))}
                       </div>
                       <ChevronRight
-                        className={`transition-transform duration-300 flex-shrink-0 text-blue-600 ${
+                        className={`transition-transform duration-300 flex-shrink-0 text-orange-600 ${
                           expandedItinerary === option.title ? "rotate-90" : ""
                         }`}
                         size={24}
@@ -144,7 +144,7 @@ console.log("ItineraryPage")
                           href={option.pdf}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                          className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-200"
                         >
                           <Download className="mr-2" size={18} />
                           Download Full Itinerary
@@ -163,7 +163,7 @@ console.log("ItineraryPage")
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-16 bg-blue-50 rounded-2xl p-8 text-center shadow-md"
+          className="mt-16 bg-orange-50 rounded-2xl p-8 text-center shadow-md"
         >
           <h3 className="text-2xl font-bold mb-4">Ready for Your Adventure?</h3>
           <p className="text-lg mb-6">
@@ -174,14 +174,14 @@ console.log("ItineraryPage")
               href="http://www.revnroar.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg border border-blue-200 hover:bg-blue-50 transition-colors duration-200"
+              className="inline-flex items-center px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg border border-blue-200 hover:bg-orange-50 transition-colors duration-200"
             >
               <Globe className="mr-2" size={18} />
               www.revnroar.com
             </a>
             <a
               href="tel:+917017775164"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -22,7 +22,7 @@ const destinations = [
     description: "Think Pangong Tso's magical hue, the thrill of Khardung La, and the warm smiles of Nubra Valley...",
     fullDescription:
       "Nestled in the northernmost part of India, Ladakh is a land of stark landscapes, ancient monasteries, and vibrant culture. From the world's highest motorable passes to serene lakes that change colors with the sun, Ladakh offers an otherworldly experience that stays with you long after you've left.",
-    image: "/Ladakh3.jpg.avif?height=1080&width=1920",
+    image: "/placeholder.svg?height=1080&width=1920",
     mapLocation: "34.1526° N, 77.5770° E",
     bestTimeToVisit: "June to September",
     altitude: "3,000 - 5,500 meters",
@@ -58,7 +58,7 @@ const destinations = [
       "A remote wonderland with crystal-clear skies, ancient monasteries, and landscapes that belong in a dream...",
     fullDescription:
       "Spiti Valley, often referred to as 'Little Tibet', is a cold desert mountain valley located high in the Himalayas. With its breathtaking landscapes, thousand-year-old monasteries, and clear night skies perfect for stargazing, Spiti offers a journey into both natural beauty and spiritual tranquility.",
-    image: "/spiti-location.jpg?height=1080&width=1920",
+    image: "/placeholder.svg?height=1080&width=1920",
     mapLocation: "32.2464° N, 78.0349° E",
     bestTimeToVisit: "May to October",
     altitude: "3,800 meters (average)",
@@ -113,7 +113,7 @@ export default function LocationsPage() {
       <div className="relative h-[60vh] md:h-[80vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/ladakh-hero-location-2.jpg?height=1080&width=1920"
+            src="/placeholder.svg?height=1080&width=1920"
             alt="Mountains background"
             style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}
             className="object-cover"
@@ -144,7 +144,7 @@ export default function LocationsPage() {
               className="h-20 md:h-32"
             >
               <img
-                src="/logo-white.png?height=200&width=400"
+                src="/placeholder.svg?height=200&width=400"
                 alt="Rev & Roar Logo"
                 width="200"
                 height="100"
@@ -208,7 +208,7 @@ export default function LocationsPage() {
                     className="w-full md:w-1/2 relative h-[50vh] md:h-[70vh] overflow-hidden rounded-2xl"
                   >
                     <img
-                      src={destination.image || "/ladakh-hero-location.jpg"}
+                      src={destination.image || "/placeholder.svg"}
                       alt={destination.name}
                       className="object-cover"
                       style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}

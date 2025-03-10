@@ -7,6 +7,7 @@ import Enquiry from "./pages/Enquiry";
 import AboutUs from "./pages/AboutUs";
 import Location from "./pages/Location";
 import Temp from "./pages/ItineraryPage";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/location" element={<Location />} />
         <Route exact path="/itinerarypage" element={<Temp />} />
+        <Route path="/contact" element={<ContactUs />} />
+
       </Routes>
       </>
   );

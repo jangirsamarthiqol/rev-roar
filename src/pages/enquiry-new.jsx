@@ -158,11 +158,11 @@ We also provide medical support if required.`,
       id: 15,
       question: "How do you ensure safety during bike trips?",
       answer: `Safety is non-negotiable at Rev & Roar. Here's how we ensure it:
-Pre-trip bike checks and basic training.
-Mandatory safety gear (helmet, gloves, etc.).
-Experienced guides and mechanics.
-Backup vehicle for emergencies.
-Strict adherence to AMS prevention guidelines.`,
+• Pre-trip bike checks and basic training.
+• Mandatory safety gear (helmet, gloves, etc.).
+• Experienced guides and mechanics.
+• Backup vehicle for emergencies.
+• Strict adherence to AMS prevention guidelines.`,
       icon: <Shield className="w-5 h-5" />,
     },
     {

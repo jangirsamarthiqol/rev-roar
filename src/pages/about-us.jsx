@@ -146,7 +146,7 @@ export default function AboutUs() {
           className="mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-8 text-gray-800">
-            At Rev & Roar, we don't just plan trips—<span className="text-blue-600 italic"> we craft life-changing experiences.</span>
+            At Rev & Roar, we don't just plan trips—<span className="text-orange-600 italic"> we craft life-changing experiences.</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-700">Picture this:</p>
         </motion.div>
@@ -199,7 +199,7 @@ export default function AboutUs() {
             className="text-4xl md:text-6xl font-bold mb-16 text-gray-800 inline-block relative"
           >
             OUR ADVENTURES
-            <span className="absolute -bottom-3 left-0 w-1/3 h-1 bg-blue-600"></span>
+            <span className="absolute -bottom-3 left-0 w-1/3 h-1 bg-orange-600"></span>
           </motion.h2>
 
           <motion.div
@@ -239,7 +239,7 @@ export default function AboutUs() {
                   <ul className="space-y-4">
                     {adventure.info.map((info, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                        <CheckCircle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
                         <p className="text-lg text-gray-700">{info}</p>
                       </li>
                     ))}
@@ -263,7 +263,7 @@ export default function AboutUs() {
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-800 inline-block relative">
               Why Travel With Us
-              <span className="absolute -bottom-3 left-0 w-1/3 h-1 bg-blue-600"></span>
+              <span className="absolute -bottom-3 left-0 w-1/3 h-1 bg-orange-600"></span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl">
               We're not just another travel company. We're your partners in adventure. Here's why our customers swear by us:
@@ -281,7 +281,7 @@ export default function AboutUs() {
               variants={fadeInUp}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
-              <Shield className="w-16 h-16 text-blue-600 mb-6" />
+              <Shield className="w-16 h-16 text-orange-600 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Safety First</h3>
               <p className="text-lg text-gray-700">
                 Backup vehicles, AMS prevention stops, and experienced guides to handle every challenge.
@@ -292,7 +292,7 @@ export default function AboutUs() {
               variants={fadeInUp}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
-              <Users className="w-16 h-16 text-blue-600 mb-6" />
+              <Users className="w-16 h-16 text-orange-600 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Customized Fun</h3>
               <p className="text-lg text-gray-700">
                 Whether you're a thrill-seeker or prefer relaxed exploration, we tailor trips to your vibe.
@@ -303,7 +303,7 @@ export default function AboutUs() {
               variants={fadeInUp}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
-              <MapPin className="w-16 h-16 text-blue-600 mb-6" />
+              <MapPin className="w-16 h-16 text-orange-600 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-gray-800">Local Expertise</h3>
               <p className="text-lg text-gray-700">
                 We know these mountains like the back of our hand. Expect secret spots, authentic experiences, and insider stories.
@@ -373,7 +373,7 @@ export default function AboutUs() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-20 px-4 bg-blue-600 text-white">
+      <section className="py-20 px-4 bg-orange-600 text-white">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -381,7 +381,7 @@ export default function AboutUs() {
           variants={fadeInUp}
           className="max-w-5xl mx-auto text-center"
         >
-          <svg className="w-16 h-16 mx-auto mb-6 text-blue-300" fill="currentColor" viewBox="0 0 24 24">
+          <svg className="w-16 h-16 mx-auto mb-6 text-orange-300" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
           </svg>
           <p className="italic text-2xl md:text-4xl font-light">
@@ -402,7 +402,7 @@ export default function AboutUs() {
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-800 inline-block relative">
               SAFETY & SUPPORT
-              <span className="absolute -bottom-3 left-0 w-1/3 h-1 bg-blue-600"></span>
+              <span className="absolute -bottom-3 left-0 w-1/3 h-1 bg-orange-600"></span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-700">
               Adventure doesn't have to mean taking unnecessary risks.
@@ -420,10 +420,10 @@ export default function AboutUs() {
               variants={fadeInUp}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-blue-600"
+                  className="h-8 w-8 text-orange-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -439,10 +439,10 @@ export default function AboutUs() {
               variants={fadeInUp}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-blue-600"
+                  className="h-8 w-8 text-orange-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -460,10 +460,10 @@ export default function AboutUs() {
               variants={fadeInUp}
               className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-blue-600"
+                  className="h-8 w-8 text-orange-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -509,7 +509,7 @@ export default function AboutUs() {
             <motion.div variants={fadeInUp} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 mx-auto mb-4 text-blue-400"
+                className="h-12 w-12 mx-auto mb-4 text-orange-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -524,7 +524,7 @@ export default function AboutUs() {
               <h3 className="text-2xl font-bold mb-2">Email Us</h3>
               <a
                 href="mailto:info@revnroar.com"
-                className="text-xl text-blue-300 hover:text-blue-200 transition-colors"
+                className="text-xl text-orange-300 hover:text-orange-200 transition-colors"
               >
                 info@revnroar.com
               </a>
@@ -533,7 +533,7 @@ export default function AboutUs() {
             <motion.div variants={fadeInUp} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 mx-auto mb-4 text-blue-400"
+                className="h-12 w-12 mx-auto mb-4 text-orange-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -546,7 +546,7 @@ export default function AboutUs() {
                 />
               </svg>
               <h3 className="text-2xl font-bold mb-2">Call Us</h3>
-              <a href="tel:+917017775164" className="text-xl text-blue-300 hover:text-blue-200 transition-colors">
+              <a href="tel:+917017775164" className="text-xl text-orange-300 hover:text-orange-200 transition-colors">
                 +91-7017775164
               </a>
             </motion.div>
@@ -563,7 +563,7 @@ export default function AboutUs() {
               href="http://www.revnroar.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-blue-600 text-white font-bold rounded-full text-xl hover:bg-blue-700 transition-colors"
+              className="inline-block px-8 py-4 bg-orange-600 text-white font-bold rounded-full text-xl hover:bg-orange-700 transition-colors"
             >
               Visit Our Website
             </a>
