@@ -8,88 +8,88 @@ import { X, ChevronLeft, ChevronRight, Star, Quote, Camera, Mountain, Bike } fro
 const galleryImages = [
   {
     id: 1,
-    src: "/placeholder.svg?height=600&width=800",
+    src: "/pangog-lake-at-sunset.jpg?height=600&width=800",
     alt: "Pangong Lake at sunset",
     category: "landscapes",
     location: "Ladakh",
   },
   {
     id: 2,
-    src: "/placeholder.svg?height=800&width=600",
+    src: "/bike-gallery.jpg?height=800&width=600",
     alt: "Biking through mountain passes",
     category: "adventures",
     location: "Khardung La",
   },
   {
     id: 3,
-    src: "/placeholder.svg?height=600&width=800",
-    alt: "Group photo at Key Monastery",
+    src: "/group-tour.jpg?height=600&width=800",
+    alt: "Group photo at Sipti",
     category: "people",
     location: "Spiti Valley",
   },
   {
     id: 4,
-    src: "/placeholder.svg?height=800&width=600",
+    src: "/camping under star.jpg?height=800&width=600",
     alt: "Camping under the stars",
     category: "adventures",
     location: "Nubra Valley",
   },
-  {
-    id: 5,
-    src: "/placeholder.svg?height=600&width=800",
-    alt: "Ancient monastery",
-    category: "culture",
-    location: "Spiti Valley",
-  },
+  // {
+  //   id: 5,
+  //   src: "/placeholder.svg?height=600&width=800",
+  //   alt: "Ancient monastery",
+  //   category: "culture",
+  //   location: "Spiti Valley",
+  // },
   {
     id: 6,
-    src: "/placeholder.svg?height=800&width=600",
+    src: "/enfield.jpg?height=800&width=600",
     alt: "Royal Enfield on mountain road",
     category: "adventures",
     location: "Ladakh",
   },
   {
     id: 7,
-    src: "/placeholder.svg?height=600&width=800",
+    src: "/snow.jpg?height=600&width=800",
     alt: "Snow-capped mountains",
     category: "landscapes",
-    location: "Ladakh",
-  },
-  {
-    id: 8,
-    src: "/placeholder.svg?height=800&width=600",
-    alt: "Local villagers",
-    category: "people",
     location: "Spiti Valley",
   },
+  // {
+  //   id: 8,
+  //   src: "/placeholder.svg?height=800&width=600",
+  //   alt: "Local villagers",
+  //   category: "people",
+  //   location: "Spiti Valley",
+  // },
   {
     id: 9,
-    src: "/placeholder.svg?height=600&width=800",
+    src: "/flag.jpg?height=600&width=800",
     alt: "Prayer flags on mountain pass",
     category: "culture",
     location: "Ladakh",
   },
   {
     id: 10,
-    src: "/placeholder.svg?height=800&width=600",
+    src: "/temppo.jpg?height=800&width=600",
     alt: "Tempo traveler journey",
     category: "adventures",
     location: "Spiti Valley",
   },
-  {
-    id: 11,
-    src: "/placeholder.svg?height=600&width=800",
-    alt: "Chandratal Lake",
-    category: "landscapes",
-    location: "Spiti Valley",
-  },
-  {
-    id: 12,
-    src: "/placeholder.svg?height=800&width=600",
-    alt: "Corporate team building",
-    category: "people",
-    location: "Ladakh",
-  },
+  // {
+  //   id: 11,
+  //   src: "/placeholder.svg?height=600&width=800",
+  //   alt: "Chandratal Lake",
+  //   category: "landscapes",
+  //   location: "Spiti Valley",
+  // },
+  // {
+  //   id: 12,
+  //   src: "/placeholder.svg?height=800&width=600",
+  //   alt: "Corporate team building",
+  //   category: "people",
+  //   location: "Ladakh",
+  // },
 ];
 
 const testimonials = [
@@ -129,15 +129,15 @@ const testimonials = [
 
 const sliderImages = [
   {
-    src: "/placeholder.svg?height=1080&width=1920",
+    src: "/high-alittude.jpg?height=1080&width=1920",
     quote: "Thrilling High-altitude Passes with Expert Guides.",
   },
   {
-    src: "/placeholder.svg?height=1080&width=1920",
+    src: "/bike-gallery.jpg?height=1080&width=1920",
     quote: "The hum of your bike engine as you conquer Khardung LA.",
   },
   {
-    src: "/placeholder.svg?height=1080&width=1920",
+    src: "/group-tour.jpg?height=1080&width=1920",
     quote: "A shared laugh with friends under the starry skies of Spiti.",
   },
 ];
@@ -246,12 +246,12 @@ export  function Gallery() {
   }, [selectedImage, filteredImages]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-700 to-white text-white">
       {/* Hero Section */}
       <div className="relative h-[60vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/bg-image-1.jpg?height=1080&width=1920"
             alt="Gallery hero"
             style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}
             className="object-cover opacity-60"

@@ -340,58 +340,7 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Destinations on the Map</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore the geographical locations of our adventure destinations in the Himalayas
-            </p>
-          </motion.div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={fadeInUp}
-            className="relative h-[60vh] rounded-2xl overflow-hidden shadow-xl"
-          >
-            <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
-              <img
-                src="/placeholder.svg?height=800&width=1200&text=Interactive+Map"
-                alt="Map of destinations"
-                className="object-cover"
-                style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </div>
 
-            {/* Map Pins */}
-            <div className="absolute top-1/3 left-1/4 animate-pulse">
-              <div className="relative">
-                <MapPin className="w-8 h-8 text-red-600" />
-                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white px-2 py-1 rounded text-sm font-medium shadow-md whitespace-nowrap">
-                  Ladakh
-                </span>
-              </div>
-            </div>
-
-            <div className="absolute top-1/2 right-1/3 animate-pulse">
-              <div className="relative">
-                <MapPin className="w-8 h-8 text-red-600" />
-                <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white px-2 py-1 rounded text-sm font-medium shadow-md whitespace-nowrap">
-                  Spiti Valley
-                </span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Travel Tips Section */}
       <section className="py-20 px-4 md:px-8 lg:px-16">
@@ -470,7 +419,7 @@ export default function LocationsPage() {
                 Contact Us
               </a>
               <a
-                href="/tours"
+                href="/itinerarypage"
                 className="px-8 py-4 bg-orange-700 text-white font-bold rounded-lg hover:bg-orange-800 transition-colors flex items-center"
               >
                 Browse Tours

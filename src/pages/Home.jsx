@@ -444,14 +444,14 @@ export function Home() {
       </section>
 
       {/* Upcoming Tours Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-900 text-white">
+      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-100 text-orange-600">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">
                 Upcoming Tours
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xl">
+              <p className="text-lg text-black max-w-2xl">
                 Secure your spot on our next adventure. Limited seats available!
               </p>
             </div>

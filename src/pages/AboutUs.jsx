@@ -7,22 +7,22 @@ import { ChevronRight, CheckCircle, MapPin, Shield, Users, Bike } from "lucide-r
 export default function AboutUs() {
   const cardInfo = [
     {
-      img: "/placeholder.svg?height=400&width=600",
+      img: "/bike-tour.jpg?height=400&width=600",
       desc: "The hum of your bike engine as you conquer Khardung LA.",
     },
     {
-      img: "/placeholder.svg?height=400&width=600",
+      img: "/group-tour.jpg?height=400&width=600",
       desc: "A shared laugh with friends under the starry skies of Spiti.",
     },
     {
-      img: "/placeholder.svg?height=400&width=600",
+      img: "/bike-gallery.jpg?height=400&width=600",
       desc: "Thrilling High-altitude Passes with Expert Guides.",
     },
   ];
 
   const adventures = [
     {
-      img: "/placeholder.svg?height=400&width=600",
+      img: "/bike-gallery.jpg?height=400&width=600",
       img_tag: "Bike Trips",
       desc: "Feel the roar of the engine. Feel alive.",
       icon: <Bike className="w-10 h-10" />,
@@ -33,7 +33,7 @@ export default function AboutUs() {
       ],
     },
     {
-      img: "/placeholder.svg?height=400&width=600",
+      img: "/temppo.jpg?height=400&width=600",
       img_tag: "Tempo Traveler Trips",
       desc: "Adventure is for everyone comfort included.",
       icon: <Users className="w-10 h-10" />,
@@ -42,16 +42,16 @@ export default function AboutUs() {
         "Chill with your crew while we handle the rough terrains.",
       ],
     },
-    {
-      img: "/placeholder.svg?height=400&width=600",
-      img_tag: "Corporate & College Tours",
-      desc: "From icebreaker activities to adrenaline-pumping adventures.",
-      icon: <Users className="w-10 h-10" />,
-      info: [
-        "Boost team spirit with fun challenges and bonding experiences.",
-        "Safe, well-organized itineraries for large groups.",
-      ],
-    },
+    // {
+    //   img: "/placeholder.svg?height=400&width=600",
+    //   img_tag: "Corporate & College Tours",
+    //   desc: "From icebreaker activities to adrenaline-pumping adventures.",
+    //   icon: <Users className="w-10 h-10" />,
+    //   info: [
+    //     "Boost team spirit with fun challenges and bonding experiences.",
+    //     "Safe, well-organized itineraries for large groups.",
+    //   ],
+    // },
   ];
 
   const fadeInUp = {
@@ -75,7 +75,7 @@ export default function AboutUs() {
       <div className="relative h-[90vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/mountain-view.jpg?height=1080&width=1920"
             alt="Mountains background"
             className="object-cover"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -105,7 +105,7 @@ export default function AboutUs() {
               className="h-24 md:h-32"
             >
               <img
-                src="/placeholder.svg?height=200&width=400"
+                src="/logo-white.png?height=200&width=400"
                 alt="Rev & Roar Logo"
                 width="200"
                 height="100"
@@ -218,7 +218,7 @@ export default function AboutUs() {
                 <div className="w-full md:w-2/5">
                   <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                     <img
-                      src={adventure.img || "/placeholder.svg"}
+                      src={adventure.img || "/spiti-.jpg"}
                       alt={adventure.img_tag}
                       className="object-cover"
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -334,7 +334,7 @@ export default function AboutUs() {
           className="relative h-[80vh] w-full overflow-hidden"
         >
           <img
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/laddakh.jpg?height=1080&width=1920"
             alt="Ladakh"
             className="object-cover"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -357,7 +357,7 @@ export default function AboutUs() {
           className="relative h-[80vh] w-full overflow-hidden"
         >
           <img
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/spiti-.jpg?height=1080&width=1920"
             alt="Spiti"
             className="object-cover"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -476,7 +476,7 @@ export default function AboutUs() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800">Trained Team</h3>
+              <h3 className="text-2xl font-bold mb-4 text--800">Trained Team</h3>
               <p className="text-lg text-gray-700">Guides equipped with first aid and local knowledge.</p>
             </motion.div>
           </motion.div>
@@ -484,7 +484,7 @@ export default function AboutUs() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-900 text-white">
+      <section className="py-20 px-4 md:px-8 lg:px-16 bg-orange-600 text-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"

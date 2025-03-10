@@ -267,7 +267,7 @@ export default function EnquiryPage() {
       <div className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/mountain-view.jpg?height=1080&width=1920"
             alt="Mountains background"
             style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}
             className="object-cover"
@@ -298,7 +298,7 @@ export default function EnquiryPage() {
               className="h-16 md:h-24"
             >
               <img
-                src="/placeholder.svg?height=200&width=400"
+                src="/logo-white.png?height=200&width=400"
                 alt="Rev & Roar Logo"
                 width="120"
                 height="60"
