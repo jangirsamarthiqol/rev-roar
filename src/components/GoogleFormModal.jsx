@@ -20,7 +20,7 @@ const GoogleFormModal = ({ isOpen, onClose }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/submitForm", {
+      const response = await fetch("https://rev-roar-server.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
