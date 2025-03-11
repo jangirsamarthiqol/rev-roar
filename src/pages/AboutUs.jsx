@@ -7,22 +7,22 @@ import { ChevronRight, CheckCircle, MapPin, Shield, Users, Bike } from "lucide-r
 export default function AboutUs() {
   const cardInfo = [
     {
-      img: "/bike-tour.jpg?height=400&width=600",
+      img: "/bike-tour.webp?height=400&width=600",
       desc: "The hum of your bike engine as you conquer Khardung LA.",
     },
     {
-      img: "/group-tour.jpg?height=400&width=600",
+      img: "/group-tour.webp?height=400&width=600",
       desc: "A shared laugh with friends under the starry skies of Spiti.",
     },
     {
-      img: "/bike-gallery.jpg?height=400&width=600",
+      img: "/bike-gallery.webp?height=400&width=600",
       desc: "Thrilling High-altitude Passes with Expert Guides.",
     },
   ];
 
   const adventures = [
     {
-      img: "/bike-gallery.jpg?height=400&width=600",
+      img: "/bike-gallery.webp?height=400&width=600",
       img_tag: "Bike Trips",
       desc: "Feel the roar of the engine. Feel alive.",
       icon: <Bike className="w-10 h-10" />,
@@ -33,7 +33,7 @@ export default function AboutUs() {
       ],
     },
     {
-      img: "/temppo.jpg?height=400&width=600",
+      img: "/temppo.webp?height=400&width=600",
       img_tag: "Tempo Traveler Trips",
       desc: "Adventure is for everyone comfort included.",
       icon: <Users className="w-10 h-10" />,
@@ -75,7 +75,7 @@ export default function AboutUs() {
       <div className="relative h-[90vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/mountain-view.jpg?height=1080&width=1920"
+            src="/mountain-view.webp?height=1080&width=1920"
             alt="Mountains background"
             className="object-cover"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -218,7 +218,7 @@ export default function AboutUs() {
                 <div className="w-full md:w-2/5">
                   <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
                     <img
-                      src={adventure.img || "/spiti-.jpg"}
+                      src={adventure.img || "/spiti-.webp"}
                       alt={adventure.img_tag}
                       className="object-cover"
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -334,7 +334,7 @@ export default function AboutUs() {
           className="relative h-[80vh] w-full overflow-hidden"
         >
           <img
-            src="/laddakh.jpg?height=1080&width=1920"
+            src="/laddakh.webp?height=1080&width=1920"
             alt="Ladakh"
             className="object-cover"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -357,7 +357,7 @@ export default function AboutUs() {
           className="relative h-[80vh] w-full overflow-hidden"
         >
           <img
-            src="/spiti-.jpg?height=1080&width=1920"
+            src="/spiti-.webp?height=1080&width=1920"
             alt="Spiti"
             className="object-cover"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}

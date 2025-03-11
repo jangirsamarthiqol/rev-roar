@@ -22,12 +22,12 @@ console.log("ItineraryPage")
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Hero Section */}
-      <div className="relative bg-orange-900 text-white py-20 px-4 overflow-hidden">
+      <div className="relative bg-orange-700 text-white py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          {/* <Image
-            src="/placeholder.svg?height=600&width=1200"
+          {/* <img
+            src="/temppo.jpg?height=600&width=1200"
             alt="Mountains background"
-            fill
+            // fill
             className="object-cover"
           /> */}
         </div>

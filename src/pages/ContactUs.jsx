@@ -10,7 +10,7 @@ const ContactUs = () => {
       {/* Hero Section */}
       <div className="relative h-[60vh] md:h-[80vh] overflow-hidden">
         <img 
-          src="/contact-bg.jpg" 
+          src="/contact-bg.webp" 
           alt="Contact Background" 
           className="absolute inset-0 w-full h-full object-cover opacity-50"
           style={{ objectFit: "cover" }}

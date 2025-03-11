@@ -8,9 +8,9 @@ import { RiArrowLeftWideLine, RiArrowRightWideFill } from "react-icons/ri";
 // import logoImage from "/stamp/stamp-11.png";   // Update this path
 
 // Slider images
-import img1 from "/pexels-tashi-namgyal-19161220-6492212.jpg"; // Update this path
-import img2 from "/pexels-julia-volk-5204921.jpg"; // Update this path
-import img3 from "/pexels-dhruv-jangid-2945224-30255573.jpg"; // Update this path
+import img1 from "/pexels-tashi-namgyal-19161220-6492212.webp"; // Update this path
+import img2 from "/pexels-julia-volk-5204921.webp"; // Update this path
+import img3 from "/pexels-dhruv-jangid-2945224-30255573.webp"; // Update this path
 
 const sliderImages = [img1, img2, img3];
 const quotes = [

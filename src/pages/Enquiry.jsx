@@ -267,7 +267,7 @@ export default function EnquiryPage() {
       <div className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/mountain-view.jpg?height=1080&width=1920"
+            src="/mountain-view.webp?height=1080&width=1920"
             alt="Mountains background"
             style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}
             className="object-cover"
@@ -536,7 +536,7 @@ export default function EnquiryPage() {
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
-                href="/tours"
+                href="/location"
                 className="px-8 py-4 bg-orange-700 text-white font-bold rounded-lg hover:bg-orange-800 transition-colors flex items-center justify-center gap-2"
               >
                 Browse Tours

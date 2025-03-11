@@ -8,28 +8,28 @@ import { X, ChevronLeft, ChevronRight, Star, Quote, Camera, Mountain, Bike } fro
 const galleryImages = [
   {
     id: 1,
-    src: "/pangog-lake-at-sunset.jpg?height=600&width=800",
+    src: "/pangog-lake-at-sunset.webp?height=600&width=800",
     alt: "Pangong Lake at sunset",
     category: "landscapes",
     location: "Ladakh",
   },
   {
     id: 2,
-    src: "/bike-gallery.jpg?height=800&width=600",
+    src: "/bike-gallery.webp?height=800&width=600",
     alt: "Biking through mountain passes",
     category: "adventures",
     location: "Khardung La",
   },
   {
     id: 3,
-    src: "/group-tour.jpg?height=600&width=800",
+    src: "/group-tour.webp?height=600&width=800",
     alt: "Group photo at Sipti",
     category: "people",
     location: "Spiti Valley",
   },
   {
     id: 4,
-    src: "/camping under star.jpg?height=800&width=600",
+    src: "/camping under star.webp?height=800&width=600",
     alt: "Camping under the stars",
     category: "adventures",
     location: "Nubra Valley",
@@ -43,14 +43,14 @@ const galleryImages = [
   // },
   {
     id: 6,
-    src: "/enfield.jpg?height=800&width=600",
+    src: "/enfield.webp?height=800&width=600",
     alt: "Royal Enfield on mountain road",
     category: "adventures",
     location: "Ladakh",
   },
   {
     id: 7,
-    src: "/snow.jpg?height=600&width=800",
+    src: "/snow.webp?height=600&width=800",
     alt: "Snow-capped mountains",
     category: "landscapes",
     location: "Spiti Valley",
@@ -64,14 +64,14 @@ const galleryImages = [
   // },
   {
     id: 9,
-    src: "/flag.jpg?height=600&width=800",
+    src: "/flag.webp?height=600&width=800",
     alt: "Prayer flags on mountain pass",
     category: "culture",
     location: "Ladakh",
   },
   {
     id: 10,
-    src: "/temppo.jpg?height=800&width=600",
+    src: "/temppo.webp?height=800&width=600",
     alt: "Tempo traveler journey",
     category: "adventures",
     location: "Spiti Valley",
@@ -96,7 +96,7 @@ const testimonials = [
   {
     id: 1,
     name: "Neha Sharma",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/lion-logo.webp?height=100&width=100",
     text: "This trip was the best decision of my life! Riding through Ladakh with Rev & Roar felt like living a dream. Their team made every moment unforgettable!",
     trip: "Ladakh Bike Expedition",
     rating: 5,
@@ -104,7 +104,7 @@ const testimonials = [
   {
     id: 2,
     name: "Rahul Kapoor",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/lion-logo.webp?height=100&width=100",
     text: "As a corporate group, we were blown away by their professionalism and attention to detail. From tempo rides to adventure-packed days, every detail was perfect!",
     trip: "Corporate Retreat to Spiti",
     rating: 5,
@@ -112,7 +112,7 @@ const testimonials = [
   {
     id: 3,
     name: "Priya Patel",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/lion-logo.webp?height=100&width=100",
     text: "The Spiti Valley tour exceeded all my expectations. The guides were knowledgeable, accommodations were comfortable, and the views were absolutely breathtaking!",
     trip: "Spiti Valley Explorer",
     rating: 5,
@@ -120,7 +120,7 @@ const testimonials = [
   {
     id: 4,
     name: "Vikram Singh",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/lion-logo.webp?height=100&width=100",
     text: "As an avid photographer, I was looking for the perfect spots to capture the Himalayas. Rev & Roar's team knew exactly where to take me for those perfect shots!",
     trip: "Photography Tour",
     rating: 5,
@@ -129,15 +129,15 @@ const testimonials = [
 
 const sliderImages = [
   {
-    src: "/high-alittude.jpg?height=1080&width=1920",
+    src: "/high-alittude.webp?height=1080&width=1920",
     quote: "Thrilling High-altitude Passes with Expert Guides.",
   },
   {
-    src: "/bike-gallery.jpg?height=1080&width=1920",
+    src: "/bike-gallery.webp?height=1080&width=1920",
     quote: "The hum of your bike engine as you conquer Khardung LA.",
   },
   {
-    src: "/group-tour.jpg?height=1080&width=1920",
+    src: "/group-tour.webp?height=1080&width=1920",
     quote: "A shared laugh with friends under the starry skies of Spiti.",
   },
 ];
@@ -251,7 +251,7 @@ export  function Gallery() {
       <div className="relative h-[60vh] overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/bg-image-1.jpg?height=1080&width=1920"
+            src="/bg-image-1.webp?height=1080&width=1920"
             alt="Gallery hero"
             style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover" }}
             className="object-cover opacity-60"

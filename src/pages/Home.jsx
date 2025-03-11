@@ -10,22 +10,23 @@ import {
   Mountain,
   Bike,
 } from "lucide-react";
+import GoogleFormModal from "../components/GoogleFormModal";
 
 const sliderImages = [
   {
-    src: "/bg-image-1.jpg?height=1080&width=1920",
+    src: "/bg-image-1.webp?height=1080&width=1920",
     quote: "Thrilling High-altitude Passes with Expert Guides.",
     location: "Ladakh, India",
     tag: "Adventure",
   },
   {
-    src: "/bike-featured.jpg?height=1080&width=1920",
+    src: "/bike-featured.webp?height=1080&width=1920",
     quote: "The hum of your bike engine as you conquer Khardung LA.",
     location: "Khardung La, Ladakh",
     tag: "Bike Tours",
   },
   {
-    src: "/hero-4.jpg?height=1080&width=1920",
+    src: "/hero-4.webp?height=1080&width=1920",
     quote: "A shared laugh with friends under the starry skies of Spiti.",
     location: "Spiti Valley, Himachal Pradesh",
     tag: "Group Tours",
@@ -35,14 +36,14 @@ const sliderImages = [
 const featuredDestinations = [
   {
     name: "Ladakh",
-    image: "/Ladakh-featured.jpg?height=600&width=800",
+    image: "/Ladakh-featured.webp?height=600&width=800",
     description:
       "Experience the breathtaking landscapes and ancient monasteries",
     tag: "Popular",
   },
   {
     name: "Spiti Valley",
-    image: "/spiti-featured.jpg?height=600&width=800",
+    image: "/spiti-featured.webp?height=600&width=800",
     description:
       "Discover the hidden gem of the Himalayas with stunning vistas",
     tag: "Trending",
@@ -59,6 +60,15 @@ export function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);
   const autoplayRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
@@ -107,24 +117,23 @@ export function Home() {
       {/* Hero Section with Improved Slider */}
       <div className="relative h-screen overflow-hidden">
         {/* Logo */}
-        
 
         {/* Main Slider */}
         <div className="relative w-full h-full">
           <AnimatePresence mode="wait">
-          <motion.div
-          className="absolute top-20 left-1/2 -translate-x-1/2 z-29 md:top-20"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}>
-          <img
-            src="/logo-white.png?height=400&width=800"
-            alt="Rev & Roar Logo"
-            width="360"
-            height="180"
-            className="h-32 md:h-48 w-auto object-contain"
-          />
-        </motion.div>
+            <motion.div
+              className="absolute top-20 left-1/2 -translate-x-1/2 z-29 md:top-20"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}>
+              <img
+                src="/logo-white.png?height=400&width=800"
+                alt="Rev & Roar Logo"
+                width="360"
+                height="180"
+                className="h-32 md:h-48 w-auto object-contain"
+              />
+            </motion.div>
             {sliderImages.map(
               (slide, index) =>
                 index === currentSlide && (
@@ -232,7 +241,7 @@ export function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
-                Featured Destinations
+                Featured Destination
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl">
                 Discover our handpicked destinations that offer unforgettable
@@ -240,14 +249,14 @@ export function Home() {
               </p>
             </div>
             <a
-              href="/destinations"
+              href="/location"
               className="mt-4 md:mt-0 inline-flex items-center text-orange-600 font-medium hover:text-orange-800 transition-colors">
               View all destinations
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex gap-8 justify-center items-center">
             {featuredDestinations.map((destination, index) => (
               <motion.div
                 key={index}
@@ -255,8 +264,8 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-2xl shadow-lg">
-                <div className="aspect-[4/3] relative">
+                className="group relative overflow-hidden rounded-2xl shadow-lg max-w-sm w-full h-full">
+                <div className="aspect-[4/3] relative h-full">
                   <img
                     src={destination.image || "/placeholder.svg"}
                     alt={destination.name}
@@ -284,7 +293,7 @@ export function Home() {
                       {destination.description}
                     </p>
                     <a
-                      href={`/destinations/${destination.name.toLowerCase()}`}
+                      href={`/location`}
                       className="inline-flex items-center text-white font-medium hover:text-orange-200 transition-colors">
                       Explore
                       <ArrowRight className="ml-2 w-4 h-4" />
@@ -320,7 +329,7 @@ export function Home() {
               className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src="/bike-tour.jpg?height=400&width=600"
+                  src="/bike-tour.webp?height=400&width=600"
                   alt="Bike Tours"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   style={{
@@ -346,7 +355,7 @@ export function Home() {
                   passes on a Royal Enfield or Himalayan.
                 </p>
                 <a
-                  href="/adventures/bike-tours"
+                  href="/gallery"
                   className="inline-flex items-center text-orange-600 font-medium hover:text-orange-800 transition-colors">
                   View bike tours
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -363,7 +372,7 @@ export function Home() {
               className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src="/group-tour.jpg?height=400&width=600"
+                  src="/group-tour.webp?height=400&width=600"
                   alt="Group Tours"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   style={{
@@ -389,7 +398,7 @@ export function Home() {
                   mountains with comfort and convenience.
                 </p>
                 <a
-                  href="/adventures/group-tours"
+                  href="/gallery"
                   className="inline-flex items-center text-orange-600 font-medium hover:text-orange-800 transition-colors">
                   View group tours
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -406,7 +415,7 @@ export function Home() {
               className="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
               <div className="aspect-video relative overflow-hidden">
                 <img
-                  src="/custom-tour.jpg?height=400&width=600"
+                  src="/custom-tour.webp?height=400&width=600"
                   alt="Custom Tours"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   style={{
@@ -432,7 +441,7 @@ export function Home() {
                   tailored to your preferences.
                 </p>
                 <a
-                  href="/adventures/custom-tours"
+                  href="/gallery"
                   className="inline-flex items-center text-orange-600 font-medium hover:text-orange-800 transition-colors">
                   Build your tour
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -455,25 +464,25 @@ export function Home() {
                 Secure your spot on our next adventure. Limited seats available!
               </p>
             </div>
-            <a
+            {/* <a
               href="/itinerarypage"
               className="mt-4 md:mt-0 inline-flex items-center text-orange-400 font-medium hover:text-orange-300 transition-colors">
               View all tours
               <ArrowRight className="ml-2 w-4 h-4" />
-            </a>
+            </a> */}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex gap-5 justify-center items-stretch">
             {/* Tour Card 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
-              className="bg-gray-800 rounded-xl overflow-hidden group hover:bg-gray-700 transition-colors">
+              className="bg-gray-800 rounded-xl overflow-hidden group hover:bg-gray-700 transition-colors flex flex-col max-w-[400px] w-full">
               <div className="aspect-video relative">
                 <img
-                  src="/bike-expedition.jpg?height=400&width=600"
+                  src="/bike-expedition.webp?height=400&width=600"
                   alt="Ladakh Bike Expedition"
                   className="object-cover"
                   style={{
@@ -487,7 +496,7 @@ export function Home() {
                   Bike Tour
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col justify-between h-full">
                 <div className="flex items-center text-gray-300 mb-3">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span>June 15 - June 25, 2023</span>
@@ -500,12 +509,11 @@ export function Home() {
                   on Royal Enfield bikes.
                 </p>
                 <div className="flex justify-between items-center">
-                  {/* <span className="text-lg font-bold">₹45,000</span> */}
-                  <a
-                    href="/itinerarypage"
+                  <button
+                    onClick={openModal}
                     className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg transition-colors">
                     Explore Now
-                  </a>
+                  </button>
                 </div>
               </div>
             </motion.div>
@@ -516,10 +524,10 @@ export function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gray-800 rounded-xl overflow-hidden group hover:bg-gray-700 transition-colors">
+              className="bg-gray-800 rounded-xl overflow-hidden group hover:bg-gray-700 transition-colors flex flex-col max-w-[400px] w-full">
               <div className="aspect-video relative">
                 <img
-                  src="/spiti-explore.jpg?height=400&width=600"
+                  src="/spiti-explore.webp?height=400&width=600"
                   alt="Spiti Valley Explorer"
                   className="object-cover"
                   style={{
@@ -533,7 +541,7 @@ export function Home() {
                   Group Tour
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col justify-between h-full">
                 <div className="flex items-center text-gray-300 mb-3">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span>July 5 - July 12, 2023</span>
@@ -546,62 +554,19 @@ export function Home() {
                   comfortable stays and guided exploration.
                 </p>
                 <div className="flex justify-between items-center">
-                  {/* <span className="text-lg font-bold">₹35,000</span> */}
-                  <a
-                    href="/itinerarypage"
+                  <button
+                    onClick={openModal}
                     className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg transition-colors">
                     Explore Now
-                  </a>
+                  </button>
                 </div>
               </div>
             </motion.div>
-
-            {/* Tour Card 3
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gray-800 rounded-xl overflow-hidden group hover:bg-gray-700 transition-colors"
-            >
-              <div className="aspect-video relative">
-                <img
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Manali Weekend Getaway"
-                  className="object-cover"
-                  style={{
-                    position: "absolute",
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"
-                  }}
-                />
-                <div className="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                  Weekend Trip
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center text-gray-300 mb-3">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  <span>Every Weekend</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Manali Weekend Getaway</h3>
-                <p className="text-gray-400 mb-4">
-                  3-day refreshing escape to Manali with adventure activities and mountain views.
-                </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-lg font-bold">₹12,000</span>
-                  <a 
-                    href="/tours/manali-weekend-getaway"
-                    className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg transition-colors"
-                  >
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </motion.div> */}
           </div>
         </div>
+
+        {/* Modal */}
+        <GoogleFormModal isOpen={isModalOpen} onClose={closeModal} />
       </section>
 
       {/* Testimonial Section */}
@@ -628,7 +593,7 @@ export function Home() {
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img
-                    src="/lion-logo.png?height=100&width=100"
+                    src="/lion-logo.webp?height=100&width=100"
                     alt="Testimonial Avatar"
                     width="48"
                     height="48"
@@ -671,7 +636,7 @@ export function Home() {
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img
-                    src="/lion-logo.png?height=100&width=100"
+                    src="/lion-logo.webp?height=100&width=100"
                     alt="Testimonial Avatar"
                     width="48"
                     height="48"
@@ -713,7 +678,7 @@ export function Home() {
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
                   <img
-                    src="/lion-logo.png?height=100&width=100"
+                    src="/lion-logo.webp?height=100&width=100"
                     alt="Testimonial Avatar"
                     width="48"
                     height="48"

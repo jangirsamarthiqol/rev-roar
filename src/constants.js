@@ -1,7 +1,7 @@
 export const kartikay = [
     {
       category: "Ladakh Adventure",
-      image: "/placeholder.svg?height=400&width=800",
+      image: "/ladakh-hero-location.webp?height=400&width=800",
       description: "Experience the breathtaking landscapes and rich culture of Ladakh, known as 'Little Tibet'.",
       options: [
         {
@@ -15,7 +15,7 @@ export const kartikay = [
   DAY 4: Leh to Nubra Valley – Drive through Khardung La (18,380 ft) and explore Hunder's sand dunes, enjoy a camel ride, and visit Diskit Monastery.
   DAY 5: Nubra Valley to Pangong Lake – Scenic drive along the Shyok River with an overnight lakeside camp.
   DAY 6: Pangong Lake to Leh via Changla Pass – Enjoy stunning mountain views.`,
-          pdf: "/pdfs/ladakh1.pdf",
+          pdf: "media-files/pdf/6 days ladakh Itinerary - BIKE.pdf",
         },
         {
           title: "Ladakh Adventure – Option 2",
@@ -30,7 +30,7 @@ export const kartikay = [
   DAY 6: Hanle to Umling La – Conquer the world's highest motorable pass (19,024 ft) and stay at Nyoma.
   DAY 7: Nyoma to Leh – Return via a scenic route with optional local sightseeing.
   Visit us: www.revnroar.com | Reach us: +91-7017775164`,
-          pdf: "/pdfs/ladakh2.pdf",
+          pdf: "media-files/pdf/7 days ladakh Itinerary - BIKE.pdf",
         },
       ],
     },
@@ -47,7 +47,7 @@ export const kartikay = [
           snippet: `Delhi to Manali – Relax in a Volvo bus.
   DAY 1-4: Manali to Kaza via the scenic Atal Tunnel and Kunzum Pass.
   DAY 5: Kaza to Pin Valley via Dhankar Monastery; explore local Spiti landmarks (Chicham Bridge, Langza, Hikkim, Komic, Kee Monastery).`,
-          pdf: "/pdfs/spiti1.pdf",
+          pdf: "media-files/pdf/8 days Spiti Itinirary - BIKE.pdf",
         },
         {
           title: "Spiti Valley Adventure – Option 2",
@@ -61,7 +61,7 @@ export const kartikay = [
   DAY 5-10: Local Kaza sightseeing, drive to Chandratal Lake for an overnight camp, then return to Manali via Kunzum Pass.
   Finally, board the Volvo bus back to Delhi.
   Visit us: www.revnroar.com | Reach us: +91-7017775164`,
-          pdf: "/pdfs/spiti2.pdf",
+          pdf: "media-files/pdf/10 days Spiti Itinirary - BIKE.pdf",
         },
       ],
     },
